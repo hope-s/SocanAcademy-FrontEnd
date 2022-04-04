@@ -1,0 +1,1 @@
+export const CHNAGE_NAME = "CHANGE_NAME";

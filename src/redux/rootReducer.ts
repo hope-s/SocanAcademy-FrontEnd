@@ -1,15 +1,15 @@
 import { combineReducers } from "redux";
-import reducer from "./reducer";
-import {persistReducer} from "redux-persist";
-import storage from "redux-persist/lib/storage";
-
-const configStorage = {
-    key:  "root",
-    storage
+import { persistReducer } from 'redux-persist';
+import reducer from "./reducers";
+import storage from 'redux-persist/lib/storage';
+ 
+const rootPersistConfig = {
+  key: 'app',
+  storage: storage,
 }
 
 const rootReducer = combineReducers({
     reducer
 })
 
-export default persistReducer(configStorage, rootReducer);
+export default persistReducer(rootPersistConfig, rootReducer);

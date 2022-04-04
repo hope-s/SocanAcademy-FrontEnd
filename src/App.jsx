@@ -1,17 +1,17 @@
 import React from "react";
-import Main from "./components/Main";
-import { Provider } from "react-redux";
-import store, { persist } from "./redux/store";
-import { PersistGate } from "redux-persist/integration/react";
+import HomePage from "./components/HomePage";
+import globalStyles from "./theme/globalStyles";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 export default function App() {
+  globalStyles();
   return (
-    <div>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persist}>
-          <Main />
-        </PersistGate>
-      </Provider>
-    </div>
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

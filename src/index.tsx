@@ -1,11 +1,25 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import store, { persistor } from "./redux/store";
+import { PersistGate } from "redux-persist/integration/react";
 import "./index.css";
 import App from "./App";
+import theme from "./theme/theme";
+import { NextUIProvider } from "@nextui-org/react";
 
-ReactDOM.render(
+const rootElement = document.getElementById("root");
+const el1: HTMLElement = rootElement!;
+const root = createRoot(el1);
+
+root.render(
   <React.StrictMode>
-    <App/>
-  </React.StrictMode>,
-  document.getElementById("root")
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <NextUIProvider theme={theme}>
+          <App />
+        </NextUIProvider>
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
 );
