@@ -10,7 +10,7 @@ export default function App() {
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage array={[{name: 'omid', age: 18}]} />} />
       </Routes>
     </BrowserRouter>
   );

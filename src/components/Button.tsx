@@ -23,6 +23,7 @@ export default function CustomButton(props: any) {
           color: "$primary !important",
           borderRadius: "10px 10px 15px 10px !important",
           width: "170px !important",
+          border: '1px solid',
           "&:hover": {
             color: "$textColor !important",
             boxShadow: "none !important",

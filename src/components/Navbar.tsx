@@ -56,7 +56,7 @@ const CustomInput = styled(Input)`
   @media only screen and (min-width: 568px) and (max-width: 991px) {
     width: 300px;
   }
-  border: 2px solid #fcbf17 !important;
+  border: 1px solid #fcbf17 !important;
   line-height: 1.5;
   width: 400px;
   & input {

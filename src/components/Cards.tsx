@@ -31,6 +31,7 @@ const CustomCrad = styled.section`
             margin-right: 4rem;
             margin-top: 8px;
             font-weight: bold;
+            transition: ease 300ms;
             &:hover{
             color: #fcbf17;
             }
@@ -85,12 +86,17 @@ const CustomCrad = styled.section`
           margin: 5px;
           padding: 1rem;
           text-align: center;
+          transition: ease 500ms;
+          cursor: pointer;
           & h6 {
             font-weight: bold;
             font-size: medium;
           }
           & svg {
             margin: 1rem auto 0rem auto;
+          }
+          &:hover {
+            transform: scale(1.03);
           }
         `;
     }
