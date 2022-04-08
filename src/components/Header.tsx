@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Card from "./Cards";
 import { data, icons } from "../data/data";
 import { GridFill } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.div`
   @media only screen and (max-width: 768px) {
@@ -73,18 +74,27 @@ const CradGlassContainer = styled.section`
 `;
 
 const HeaderLinkContainer = styled.div`
-  @media only screen and (max-width: 1149px) {
-    top: 40% !important;
-    border-bottom-left-radius: 0;
+  @media only screen and (max-width: 460px) {
+    top: 36%;
+    border-radius: 0;
   }
+  @media only screen and (min-width: 461px) and (max-width: 768px) {
+    top: 32%;
+    border-radius: 0;
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1150px) {
+    top: 23% !important;
+    border-radius: 0;
+  }
+  border-bottom-left-radius: 8%;
   background: #f2f2f2;
   height: 550px;
-  border-bottom-left-radius: 8%;
   position: absolute;
   left: 0;
   right: 0;
   z-index: -1;
-  top: 10%;
+  margin-bottom: 300px;
+  top: 6%;
 
   .headerLinks {
     display: flex;
@@ -96,7 +106,7 @@ const HeaderLinkContainer = styled.div`
       }
       font-size: 14px;
       color: #0b032d !important;
-      width: 160px;
+      width: 135px;
       transition: font-weight ease !important;
       &:hover {
         font-weight: 700;
@@ -196,33 +206,27 @@ export default function HomePage() {
           </CradGlassContainer>
         </HeaderContainer>
         <HeaderLinkContainer>
-          <div className="absolute bottom-8 right-0 left-0">
+          <div className="absolute bottom-1.5 md:bottom-5 right-0 left-0">
             <div className="headerLinks">
-              <a href="#s">
+              <Link to="/">
                 {icons[0]} <span>آکادمی</span>
-              </a>
-              <a href="#s">
+              </Link>
+              <Link to="/">
                 {icons[1]} <span>وبلاگ</span>
-              </a>
-              <a href="#s">
+              </Link>
+              <Link to="/">
                 {icons[2]} <span>سکان پلاس</span>
-              </a>
-              <a href="#s">
+              </Link>
+              <Link to="/">
                 {icons[3]} <span>رادیو فول استک</span>
-              </a>
-              <a href="#s">
+              </Link>
+              <Link to="/">
                 {icons[4]} <span>فن واژه</span>
-              </a>
+              </Link>
             </div>
           </div>
         </HeaderLinkContainer>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Button from "./Button";
 import logo from "../assets/logo.svg";
 import { Visible, Hidden } from "react-grid-system";
 import { Search } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 interface imgType {
   src: any;
@@ -42,7 +43,7 @@ const NavContainer = styled.div`
 const NavabrButtons = styled.div`
   display: flex;
   & button:nth-child(1) {
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
       display: none !important;
     }
   }
@@ -63,6 +64,9 @@ const CustomInput = styled(Input)`
     background: #0a0328 !important;
     color: #fcbf17;
     text-align: right;
+    &::placeholder {
+      color: #fcbf17 !important;
+    }
   }
   & label {
     background: #0a0328 !important;
@@ -87,7 +91,7 @@ export default function Navbar() {
       <Hidden xs sm>
         <NavbarBrand src={logo} alt="logo" />
         <div className="relative">
-          <CustomInput initialValue="دنبال چه میگردی؟" />
+          <CustomInput placeholder="دنبال چه میگردی؟" />
           <Search />
         </div>
         <NavabrButtons>
@@ -102,7 +106,7 @@ export default function Navbar() {
         <NavbarBrand src={logo} alt="logo" style={{ marginRight: 10 }} />
         <Button className="m-2">{`ورود / ثبت نام `}</Button>
         <div className="relative">
-          <CustomInput initialValue="دنبال چه میگردی؟" />
+          <CustomInput placeholder="دنبال چه میگردی؟" />
           <Search />
         </div>
       </Visible>

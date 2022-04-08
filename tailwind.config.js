@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -7,6 +8,9 @@ module.exports = {
       spacing: {
         '50%': '50%',
         '25px': '25px',
+      },
+      colors: {
+        primary: '#fcbf17',
       }
     },
   },

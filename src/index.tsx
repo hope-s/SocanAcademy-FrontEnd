@@ -8,9 +8,8 @@ import App from "./App";
 import theme from "./theme/theme";
 import { NextUIProvider } from "@nextui-org/react";
 
-const rootElement = document.getElementById("root");
-const el1: HTMLElement = rootElement!;
-const root = createRoot(el1);
+const rootElement = document.getElementById("root") as HTMLElement;
+const root = createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
