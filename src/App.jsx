@@ -1,8 +1,9 @@
 import React from "react";
-import HomePage from "./components/HomePage";
+import HomePage from "./pages/HomePage";
 import globalStyles from "./theme/globalStyles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import TestRenderer from 'react-test-renderer'; // ES6
 
 export default function App() {
   globalStyles();
@@ -15,3 +16,8 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+const testRenderer = TestRenderer.create(
+  <App></App>
+);
+console.log(testRenderer.toJSON());

@@ -14,7 +14,6 @@ const theme = createTheme({
             link: '#5E1DAD',
             textColor: "#0b032d"
         },
-        fonts: {}
     }
 })
 

@@ -60,6 +60,8 @@ const CustomInput = styled(Input)`
   border: 1px solid #fcbf17 !important;
   line-height: 1.5;
   width: 400px;
+  transform: unset !important;
+
   & input {
     background: #0a0328 !important;
     color: #fcbf17;
@@ -70,12 +72,6 @@ const CustomInput = styled(Input)`
   }
   & label {
     background: #0a0328 !important;
-  }
-  &:hover {
-    transform: translate(0 0) !important;
-  }
-  &:focus {
-    transform: translate(0 0) !important;
   }
   margin-top: 0.3rem;
 `;
@@ -89,7 +85,9 @@ export default function Navbar() {
   return (
     <NavContainer>
       <Hidden xs sm>
-        <NavbarBrand src={logo} alt="logo" />
+        <Link to="/">
+          <NavbarBrand src={logo} alt="logo" />
+        </Link>
         <div className="relative">
           <CustomInput placeholder="دنبال چه میگردی؟" />
           <Search />
@@ -98,13 +96,13 @@ export default function Navbar() {
           <Button
             ghost
             className="my-2 mx-1.5"
-          >{`نوشتن در سکان آکادمی`}</Button>
-          <Button className="my-2 mx-1.5">{`ورود / ثبت نام `}</Button>
+          > نوشتن در سکان آکادمی </Button>
+          <Button className="my-2 mx-1.5"> ورود / ثبت نام </Button>
         </NavabrButtons>
       </Hidden>
       <Visible xs sm>
         <NavbarBrand src={logo} alt="logo" style={{ marginRight: 10 }} />
-        <Button className="m-2">{`ورود / ثبت نام `}</Button>
+        <Button className="m-2"> ورود / ثبت نام </Button>
         <div className="relative">
           <CustomInput placeholder="دنبال چه میگردی؟" />
           <Search />

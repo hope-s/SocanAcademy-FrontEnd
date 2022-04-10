@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Card from "./Cards";
+import Card from "./HeaderCards";
 import { data, icons } from "../data/data";
 import { GridFill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
