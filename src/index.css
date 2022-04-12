@@ -25,6 +25,34 @@ body{
 	background-color: var(--nextui-colors-primary) !important;
 }
 
+.max-width {
+	width: 100% !important;
+}
+
+@media (min-width: 576px) {
+	.max-width {
+		max-width: 540px !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.max-width {
+		max-width: 720px !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.max-width {
+		max-width: 960px !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.max-width {
+		max-width: 1140px !important;
+	}
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

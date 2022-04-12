@@ -1,19 +1,15 @@
 import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 
-const CustomCrad = styled.section`
+const CustomCard = styled.section`
   ${({ type }: { type?: string }) => {
     switch (type) {
       case "glass":
         return css`
-          display: flex;
           border-radius: 15px 15px 15px 25px;
           overflow: hidden;
           height: 115px;
-          max-width: 360px;
           width: 100%;
-          padding: 5px;
-          margin: 10px;
           background-color: hsla(0, 0%, 100%, 0.05);
           -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -81,12 +77,14 @@ const CustomCrad = styled.section`
         return css`
           width: 165px;
           height: 160px;
+          z-index: 99;
           background-color: #ffffff;
           border-radius: 15px;
           margin: 5px;
           padding: 1rem;
           text-align: center;
           transition: ease 500ms;
+          user-select: none;
           cursor: pointer;
           & h6 {
             font-weight: bold;
@@ -103,12 +101,12 @@ const CustomCrad = styled.section`
   }}
 `;
 
-export default function Crad({
+export default function Card({
   children,
   type,
 }: {
   children: ReactNode;
   type?: string;
 }) {
-  return <CustomCrad type={type}>{children}</CustomCrad>;
+  return <CustomCard type={type}>{children}</CustomCard>;
 }

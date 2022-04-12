@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { icons } from "../data/data";
+import { icons } from "../../assets/svgs/Icons";
 import { Grid } from "react-bootstrap-icons";
 
-const CustomCardPost = styled.div`
+const CardPostStyle = styled.div`
   overflow: hidden !important;
-  border-radius: 25px;
+  border-radius: 20px 20px 25px 25px;
   height: 260px;
   display: flex;
   position: relative;
@@ -45,17 +45,18 @@ const CustomCardPost = styled.div`
       margin-bottom: 5rem !important;
       font-size: 12px;
       & img {
-        border-radius: 30%;
+        border-radius: 100%;
       }
     }
   }
-  & img {
+  & img:not(.iconWrapper) {
     position: absolute;
     transition: 0.4s;
-    background-color: #bfbfbf;
+    filter: brightness(0.8);
+    cursor: pointer;
     &:hover {
       transform: scale(1.1);
-      background-color: unset;
+      filter: unset;
     }
   }
   & .cardWrapperTimer {
@@ -92,18 +93,31 @@ const CustomCardPost = styled.div`
   }
 `;
 
-export default function CardPost() {
+interface cardProps {
+  srcLink: string;
+  day: number;
+  title: string;
+  writer: string;
+  scale: string;
+  description: string;
+}
+
+export default function CardPost({
+  srcLink,
+  day,
+  title,
+  writer,
+  scale,
+  description,
+}: cardProps) {
   return (
-    <CustomCardPost>
-      <img
-        src="https://fs.sokanacademy.com/api/files?token=app/courses/6rlTeAJ4kmcCJXnEwjdMwYouasbZ5TPgSCUbpS0k"
-        alt=""
-      />
+    <CardPostStyle>
+      <img src={srcLink} alt="post_iamge" />
       <div className="svg">{icons[4]}</div>
       <div className="bookmarkSvg">{icons[6]}</div>
       <div className="cardWrapper">
-        <span className="cardWrapperTimer"> 4 روز پیش</span>
-        <h6>مقدمه ای بر تجربه کاربری</h6>
+        <span className="cardWrapperTimer"> {day} روز پیش</span>
+        <h6>{title}</h6>
         <div className="cardWrapperFooter">
           <img
             width="25"
@@ -112,15 +126,12 @@ export default function CardPost() {
             src="https://sokanacademy.com/imgs/fallbacks/fallback-user.jpg"
             alt="user-icon"
           />
-          <span className="mr-8 ml-2">حمیدرضا معدنی</span>
+          <span className="mr-2 ml-3">{writer}</span>
           <i>{<Grid size={20} />}</i>
-          <span className="mr-1"> برنامه نویس</span>
+          <span className="mr-1">{scale}</span>
         </div>
-        <p className="cardWarpperDescription">
-          یکی از شاخه‌های محبوب طراحی دیجیتال، "طراحی تجربه‌ی کاربری" (UX/User
-          ...
-        </p>
+        <p className="cardWarpperDescription">{description}</p>
       </div>
-    </CustomCardPost>
+    </CardPostStyle>
   );
 }

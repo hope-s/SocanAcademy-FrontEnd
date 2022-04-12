@@ -8,7 +8,7 @@ const initialState : initialStateTypes = {
     counter: 199
 }
 
-const reducer = (state: any = initialState, action: any) => {
+const reducer = (state: initialStateTypes = initialState, action: {type: any}) => {
     switch (action.type) {
         case CHNAGE_NAME:
             return {

@@ -5,13 +5,23 @@ module.exports = {
   ],
   theme: {
     extend: {
-      spacing: {
-        '50%': '50%',
-        '25px': '25px',
+      margin: {
+        "mx-auto": "auto"
       },
       colors: {
         primary: '#fcbf17',
-      }
+      },
+      borderRadius: {
+        'none': '0',
+        '4xl': '2.5rem',
+        '30%': '30%',
+      },
+      minWidth: {
+        '800': '800px',
+      },
+      textAlign: {
+        "unset" : "unset"
+      },
     },
     screens: {
       "xs": "420px",
