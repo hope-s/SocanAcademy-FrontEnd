@@ -28,10 +28,8 @@ const OverflowContainer = styled.div`
   &::-webkit-scrollbar {
     display: none !important;
   }
-  & {
-    -ms-overflow-style: none !important;
-    scrollbar-width: none !important;
-  }
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
   overflow-x: scroll !important;
 `;
 

@@ -43,7 +43,6 @@ const CardPostStyle = styled.div`
       transition: all 0.5s;
 
       margin-bottom: 5rem !important;
-      font-size: 12px;
       & img {
         border-radius: 100%;
       }
@@ -64,7 +63,6 @@ const CardPostStyle = styled.div`
     top: 1rem;
     left: 1rem;
     color: #fcbf17;
-    font-size: 13px;
   }
   & h6 {
     margin-top: 1.5rem;
@@ -93,9 +91,9 @@ const CardPostStyle = styled.div`
   }
 `;
 
-interface cardProps {
+interface props {
   srcLink: string;
-  day: number;
+  day: number | string;
   title: string;
   writer: string;
   scale: string;
@@ -109,7 +107,7 @@ export default function CardPost({
   writer,
   scale,
   description,
-}: cardProps) {
+}: props) {
   return (
     <CardPostStyle>
       <img src={srcLink} alt="post_iamge" />

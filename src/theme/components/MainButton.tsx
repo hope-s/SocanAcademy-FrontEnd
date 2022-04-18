@@ -11,7 +11,6 @@ export default function CustomButton(props: any) {
     fontSize: "1rem",
     minWidth: "unset !important",
     "&:hover": {
-      fontWeight: "700",
       boxShadow: "0 5px 10px rgba(142,105,2,.18)!important",
     },
     variants: {
@@ -19,16 +18,6 @@ export default function CustomButton(props: any) {
         normal: {
           color: "$main !important",
           width: "120px !important",
-        },
-        outlined: {
-          color: "$primary !important",
-          borderRadius: "10px 10px 15px 10px !important",
-          width: "170px !important",
-          border: "1px solid",
-          "&:hover": {
-            color: "$main !important",
-            boxShadow: "none !important",
-          },
         },
       },
     },
@@ -43,5 +32,5 @@ export default function CustomButton(props: any) {
 CustomButton.propTypes = {
   children: PropTypes.any,
   ghost: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };

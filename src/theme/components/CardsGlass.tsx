@@ -27,6 +27,7 @@ const CustomCard = styled.section`
             margin-right: 4rem;
             margin-top: 8px;
             font-weight: bold;
+            font-size: 1rem !important;
             transition: ease 300ms;
             &:hover{
             color: #fcbf17;
@@ -35,12 +36,10 @@ const CustomCard = styled.section`
           }
           & .cardFooter {
             display: flex;
+            align-items: center;
             position: absolute;
             color: #f2f2f2;
-            bottom: -1px;
-            & p {
-              font-size: 14px;
-            }
+            font-size: 1rem !important;
             & .cardFooterAuhter {
               display: flex;
               margin-top: 1rem;
@@ -87,8 +86,11 @@ const CustomCard = styled.section`
           user-select: none;
           cursor: pointer;
           & h6 {
-            font-weight: bold;
+            font-weight: 700;
             font-size: medium;
+          }
+          & p {
+            font-size: 14px !important; 
           }
           & svg {
             margin: 1rem auto 0rem auto;

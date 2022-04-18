@@ -2,6 +2,7 @@
 	font-family: IRANSansX;
 	font-style: normal;
 	font-weight: 700;
+	font-display: inherit;
 	src: url('assets/font/woff/IRANSansX-Bold.woff') format('woff'),   
 	url('assets/font/woff2/IRANSansX-Bold.woff2') format('woff2');	 
 }
@@ -10,6 +11,7 @@
 	font-family: IRANSansX;
 	font-style: normal;
 	font-weight: 400;
+	font-display: inherit;
 	src: url('assets/font/woff/IRANSansX-Regular.woff') format('woff'),   
 	url('assets/font/woff2/IRANSansX-Regular.woff2') format('woff2');	
 }
@@ -49,6 +51,34 @@ body{
 
 @media (min-width: 1200px) {
 	.max-width {
+		max-width: 1140px !important;
+	}
+}
+
+.none{
+	display: none !important;
+}
+
+@media (min-width: 576px) {
+	.sm\:none {
+		max-width: 540px !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.md\:none {
+		max-width: 720px !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.lg\:none {
+		max-width: 960px !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.xl\:none {
 		max-width: 1140px !important;
 	}
 }

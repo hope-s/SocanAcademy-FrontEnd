@@ -11,7 +11,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>

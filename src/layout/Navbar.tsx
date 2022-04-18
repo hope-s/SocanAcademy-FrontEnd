@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Visible, Hidden } from "react-grid-system";
 import { Search } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
-import NavbarInput from "../components/SearchInput";
+import NavbarInput from "./SearchBar";
 import NavbarButtons from "./NavButtons";
 import Container from "../components/Container";
 
@@ -30,7 +29,7 @@ const NavbarStyles = styled.nav`
     flex-wrap: wrap;
     & svg {
       left: 0.7rem;
-      bottom: .5rem;
+      bottom: 0.5rem;
       position: absolute;
       color: #fff;
       font-size: 24px;
@@ -45,9 +44,7 @@ export default function Navbar() {
     <NavbarStyles>
       <Container>
         <Hidden xs sm>
-          <Link to="/">
-            <Logo />
-          </Link>
+          <Logo />
           <div className="relative">
             <NavbarInput placeholder="دنبال چه میگردی؟" />
             <Search />

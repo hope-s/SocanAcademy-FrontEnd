@@ -9,13 +9,13 @@ const NavLinks = styled.nav`
       width: 100px !important;
     }
     width: 165px;
-    font-size: 13px;
-    color: #0b032d !important;
-    transition: font-weight ease !important;
-    transition: 0.1s !important;
-    &:hover {
+    color: #0b032d;
+    & span {
+      transition: all 0.2s;
+    }
+    &:hover span {
       font-weight: 600;
-      letter-spacing: -0.25px;
+      letter-spacing: -0.35px;
     }
     svg {
       display: inline;
@@ -35,7 +35,7 @@ const NavLinks = styled.nav`
 
 export default function HeaderLinks() {
   return (
-    <NavLinks className="max-width md:mx-auto flex justify-between pt-2 pb-1 md:py-4 text-center md:text-right">
+    <NavLinks className="max-width sm:mx-auto flex justify-between pt-2 pb-1 md:py-4 text-center md:text-right">
       <Link to="/">
         {icons[0]} <span>آکادمی</span>
       </Link>

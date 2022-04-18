@@ -14,10 +14,8 @@ const NavButtonsStyle = styled.div`
 export default function NavbarButtons() {
   return (
     <NavButtonsStyle>
-      <Button ghost className="my-2 mx-1.5">
-        نوشتن در سکان آکادمی
-      </Button>
-      <Button className="my-2 mx-1.5"> ورود / ثبت نام </Button>
+      <Button ghost className="my-2 mx-1.5"> نوشتن در سکان آکادمی </Button>
+      <Button className="my-2 mx-1.5"> ورود / ثبت نام  </Button>
     </NavButtonsStyle>
   );
 }

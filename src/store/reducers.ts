@@ -1,4 +1,4 @@
-import { CHNAGE_NAME } from "./constans";
+import { CHNAGE_NAME } from "./actionTypes";
 
 export interface initialStateTypes {
     counter: number
