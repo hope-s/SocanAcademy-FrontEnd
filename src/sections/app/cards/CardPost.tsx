@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { icons } from "../../assets/svgs/Icons";
+import { icons } from "../../../assets/svgs/Icons";
 import { Grid } from "react-bootstrap-icons";
 
 const CardPostStyle = styled.div`

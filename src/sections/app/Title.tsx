@@ -24,7 +24,7 @@ HeaderSecetion.defaultProps = {
   mb: "0.75rem",
 };
 
-export default function TitleSection({
+export default function Title({
   title,
   icon,
   type,
@@ -38,7 +38,7 @@ export default function TitleSection({
   mb?: string;
 }) {
   return (
-    <HeaderSecetion {...mt} {...mb} isSvg={type === "svg" && true}>
+    <HeaderSecetion mt={mt} mb={mb} isSvg={type === "svg" && true}>
       {icon && type === "svg" ? (
         <>
           {icon}
@@ -54,7 +54,7 @@ export default function TitleSection({
   );
 }
 
-TitleSection.propTypes = {
+Title.propTypes = {
   title: PropTypes.string.isRequired, //
   icon: PropTypes.any,
   type: PropTypes.string.isRequired,

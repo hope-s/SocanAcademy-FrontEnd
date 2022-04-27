@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Card } from "@nextui-org/react";
 import { icons } from "../../assets/svgs/Icons";
 import { Row, Col } from "react-grid-system";
-import TitleSection from "./TitleSection";
+import Title from "./Title";
 import Container from "../../components/Container";
 
 const CustomCard = styled(Card)`
@@ -58,7 +58,7 @@ export default function LandingIntroCards() {
       <Row>
         <Col className="my-1 lg:p-2" xs={12} lg={3}>
           <CustomCard color="default">
-            <TitleSection title="بلاگ" icon={icons[1]} type="svg" mb="-2px" />
+            <Title title="بلاگ" icon={icons[1]} type="svg" mb="-2px" />
             <CardBody>
               شما در سکان بلاگ به مقالات و چالشهای روز دنیای برنامه نویسی به
               زبان فارسی دسترسی خواهید داشت.
@@ -71,7 +71,7 @@ export default function LandingIntroCards() {
 
         <Col className="my-1 lg:p-2" xs={12} lg={6}>
           <CustomCard color="default">
-            <TitleSection title="آکادمی" icon={icons[2]} type="svg" mb="-2px" />
+            <Title title="آکادمی" icon={icons[2]} type="svg" mb="-2px" />
             <CardBody className="m-0 xl:m-6">
               سکان آکادمی مرجع آموزش های به روز و رایگان در حوزه برنامه نویسی
               است. با ارا ئه دوره ها و مسیرهای تخصصی، شما را تا رسیدن به بازار
@@ -89,7 +89,7 @@ export default function LandingIntroCards() {
 
         <Col className="my-1 lg:p-2" xs={12} lg={3}>
           <CustomCard color="default">
-            <TitleSection
+            <Title
               title="فن واژه"
               icon={icons[4]}
               type="svg"

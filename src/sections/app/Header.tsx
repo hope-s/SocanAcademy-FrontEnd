@@ -7,7 +7,7 @@ import background from "../../assets/images/header-background.jpg";
 
 const HeaderStyles = styled.header`
   position: relative !important;
-  background: #0a0328 url(${background}) no-repeat center !important;
+  background: #0a0328 url(${background});
   background-size: cover;
   bottom: 0;
   padding: 2rem 0;
@@ -35,7 +35,7 @@ const OverflowContainer = styled.div`
 
 export default function Header() {
   return (
-    <div className="relative lg:rounded-bl-4xl bg-zinc-100 overflow-hidden">
+    <div className="relative lg:rounded-bl-4xl bg-zinc-100 overflow-hidden -mt-5">
       <HeaderStyles className="lg:rounded-bl-30% lg:before:rounded-bl-30%">
         <OverflowContainer>
           <HeaderCards />

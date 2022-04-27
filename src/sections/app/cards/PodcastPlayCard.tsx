@@ -1,18 +1,25 @@
 import React from "react";
-import TitleSection from "./TitleSection";
 import { Card, Text } from "@nextui-org/react";
-import { icons } from "../../assets/svgs/Icons";
-import MainButton from "../../theme/components/MainButton";
-import Container from "../../components/Container";
 import { Col, Row } from "react-grid-system";
 import styled from "styled-components";
 import { Bookmark, Share } from "react-bootstrap-icons";
 import PropTypes from "prop-types";
+import Title from "../Title";
+import { icons } from "../../../assets/svgs/Icons";
+import MainButton from "../../../theme/components/MainButton";
+import Container from "../../../components/Container";
 
-const CardPlayDesktop = styled(Card)`
+const CustomCard = styled(Card)`
+  display: grid;
+  border-radius: 25px 25px 25px 50px;
+  @media only screen and (min-width: 992px) {
+    height: 130%;
+  }
+`;
+
+const CardPlay = styled(Card)`
   display: flex !important;
   border-radius: 25px 25px 25px 50px;
-  margin-top: -9%;
   background-color: #0a0328;
   padding: 10px;
   .card_image {
@@ -38,36 +45,28 @@ const CardPlayDesktop = styled(Card)`
 `;
 
 export default function PodcastPlayCard({ title }: { title: string }) {
+  const data = {
+    text: "شما از طریق رادیو فول استک به پادکست های گفتگو محور و موضوع محور دسترسی خواهید داشت. با گوش سپردن به رادیو فول استک با شخصیت هایموفق حوزه برنامه نویسی و دیجیتال، مسیر و چالش هایی که سپری کردهاند آگاه خواهید شد. پادکست های گفتگو محور به موضوعات برنامه نویسی و چالش های روز این حوزه می پردازد.",
+    cardTitle: "ایلیا وکیلی - مدیر ارشد ابروان",
+  };
   return (
     <Container>
       <Row>
         <Col xs={12}>
-          <Card
-            css={{
-              mw: "100%",
-              h: "350px",
-              display: "grid",
-              mt: "2rem",
-              borderRadius: "25px 25px 25px 50px",
-            }}
+          <CustomCard
+            className="py-4 lg:py-6 mt-4"
           >
-            <TitleSection type="svg" title={title} icon={icons[4]} mt="2rem" />
+            <Title type="svg" title={title} icon={icons[4]} mt="2rem" />
             <Text className="text-base text-right sm:my-4 px-4">
-              شما از طریق رادیو فول استک به پادکست های گفتگو محور و موضوع محور
-              دسترسی خواهید داشت. با گوش سپردن به رادیو فول استک با شخصیت های
-              موفق حوزه برنامه نویسی و دیجیتال، مسیر و چالش هایی که سپری کرده
-              اند آگاه خواهید شد. پادکست های گفتگو محور به موضوعات برنامه نویسی
-              و چالش های روز این حوزه می پردازد.
+              {data.text}
             </Text>
-            <MainButton className="mx-auto mt-2 md:mt-8">
-              همه اپیزود ها
-            </MainButton>
-          </Card>
+            <MainButton className="mx-auto mt-6">همه اپیزود ها</MainButton>
+          </CustomCard>
         </Col>
       </Row>
       <Row>
         <Col lg={10} className="mx-auto">
-          <CardPlayDesktop>
+          <CardPlay className="mt-4 ">
             <div className="flex flex-wrap md:flex-nowrap justify-center">
               <img
                 className="card_image"
@@ -78,23 +77,23 @@ export default function PodcastPlayCard({ title }: { title: string }) {
               <div className="w-full px-3">
                 <div className="flex justify-between mt-3 md:mt-0">
                   <a className="card_play_title" href="#d">
-                    <span>ایلیا وکیلی - مدیر ارشد ابروان</span>
+                    <span>{data.cardTitle}</span>
                   </a>
                   <div>
                     <button>
-                      <Share size={25} color="#ffffff" />
+                      <Share size={20} color="#ffffff" />
                     </button>
                     <button className="mr-3">
-                      <Bookmark size={25} color="#ffffff" />
+                      <Bookmark size={20} color="#ffffff" />
                     </button>
                   </div>
                 </div>
                 <a className="card_play_p" href="#d">
-                  <p>ایلیا وکیلی - مدیر ارشد ابروان</p>
+                  <p>{data.cardTitle}</p>
                 </a>
               </div>
             </div>
-          </CardPlayDesktop>
+          </CardPlay>
         </Col>
       </Row>
     </Container>

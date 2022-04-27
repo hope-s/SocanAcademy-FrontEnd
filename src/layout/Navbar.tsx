@@ -10,10 +10,11 @@ import Container from "../components/Container";
 const NavbarStyles = styled.nav`
   background: #0a0328;
   box-shadow: 0 2px 0 #0a0328;
-  padding: 0.5rem 0rem;
+  padding: 0.7rem 0rem;
   position: sticky;
   top: 0;
   z-index: 9999;
+  border-bottom-left-radius: 25px;
   & > div {
     @media only screen and (max-width: 768px) {
       justify-content: space-between;

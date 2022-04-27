@@ -4,7 +4,7 @@ import { icons } from "../assets/svgs/Icons";
 import styled from "styled-components";
 
 const NavLinks = styled.nav`
-    a {
+  a {
     @media only screen and (max-width: 768px) {
       width: 100px !important;
     }
@@ -29,7 +29,6 @@ const NavLinks = styled.nav`
     &:hover svg {
       transform: scale(1.1);
     }
-  }
   }
 `;
 

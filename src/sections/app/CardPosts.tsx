@@ -1,5 +1,5 @@
 import React from "react";
-import CardPost from "../../theme/components/CardPost";
+import CardPost from "./cards/CardPost";
 import { Row, Col } from "react-grid-system";
 import styled from "styled-components";
 import { CaretLeft, CaretRight } from "react-bootstrap-icons";
@@ -13,8 +13,6 @@ const Dots = styled.div`
 `;
 
 const DotButtons = styled.button`
-  padding: 10px 13px;
-  margin: 0 30px;
   border-radius: 8px;
   background-color: #fcbf17;
   color: #ffffff;
@@ -24,7 +22,7 @@ export default function CardPosts() {
   const data = {
     srcLink:
       "	https://fs.sokanacademy.com/api/files?token=app/sections/LlCLSgvo6GgKFSxEOTIJWlU5JyXuLzVjzZyfFIhm",
-    day: 1,
+    day: 2,
     title: "مقدمه ای بر تجربه طراحی رابط کاربری",
     writer: "سپهر نوری",
     scale: "برنامه نویس",
@@ -42,11 +40,11 @@ export default function CardPosts() {
       <Row>
         <Col>
           <Dots className="sm:justify-center">
-            <DotButtons>
+            <DotButtons className="p-2.5 mx-4 sm:mx-12">
               <CaretRight size={20} />
             </DotButtons>
             <h4 className="m-0 text-lg">جدیدترین موضوعات</h4>
-            <DotButtons>
+            <DotButtons className="p-2.5 mx-4 sm:mx-12">
               <CaretLeft size={20} />
             </DotButtons>
           </Dots>
