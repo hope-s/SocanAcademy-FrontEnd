@@ -34,16 +34,21 @@ const CustomCard = styled(Card)`
       position: absolute;
       left: 0;
       top: 0;
+      width: 100%;
       height: 100%;
+      border-radius: 20px 20px 0 0;
       &:hover {
         .card_text_wrapper {
           transform: translateY(5%);
         }
-        img {
+        .post_image {
           transform: scale(1.125);
         }
       }
-      & img {
+      & .post_image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         transition: all 0.4s;
       }
       &::before {
@@ -66,17 +71,15 @@ const CustomCard = styled(Card)`
         position: absolute;
         top: 0;
         z-index: 99;
-        transform: translateY(70%);
+        transform: translateY(80%);
         transition: 0.4s;
-        .card_title {
+        .card_post_title {
           text-align: right;
           color: #ffffff;
-          padding: 0 16px;
         }
-        .card_description {
+        .card_post_description {
           text-align: right;
           color: #ffffff !important;
-          padding: 0 16px;
         }
       }
     }
@@ -108,15 +111,16 @@ export default function PlusChildCard() {
       <div className="card_post_body">
         <div className="card_image_wrapper">
           <img
-            src="https://fs.sokanacademy.com/api/files?token=app/pluses/FSvpwZCqRXfrrUthbo4HubLhBMPpesnSu3CX1OzY"
+            className="post_image"
+            src="https://fs.sokanacademy.com/api/files?token=app/pluses/vtbqWzc5tf6YMkL7Avze0LVlnkp2M6njBlB2H8Ag"
             alt="img"
           />
           <div className="card_text_wrapper">
-            <h5 className="card_title">
-              ثروت سازی چیزی که به ما یاد ندادند با مدل OBD
-            </h5>
-            <p className="card_description">
-              ثروت سازی چیزی که به ما یاد ندادند...
+            <h5 className="card_post_title py-0 px-4">دانلود پکیج درگاه پرداخت برای لاراول</h5>
+            <p className="card_post_description py-0 px-4">
+              برای داشتن درگاه پرداخت در سایت های با لاراول بصورت تخصصی نوشته
+              شده اند، نیاز هست تا api درگاه پرداخت برای آن نیز پیاده سازی شود،
+              در این مطلب پکیچ لاراول برای درگاه پرداخت رایان پی معرفی شده است
             </p>
           </div>
         </div>

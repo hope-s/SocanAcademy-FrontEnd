@@ -58,7 +58,7 @@ export default function LandingIntroCards() {
       <Row>
         <Col className="my-1 lg:p-2" xs={12} lg={3}>
           <CustomCard color="default">
-            <Title title="بلاگ" icon={icons[1]} type="svg" mb="-2px" />
+            <Title title="بلاگ" iconType="svg" icon={icons[1]} mb="-2px" />
             <CardBody>
               شما در سکان بلاگ به مقالات و چالشهای روز دنیای برنامه نویسی به
               زبان فارسی دسترسی خواهید داشت.
@@ -71,7 +71,7 @@ export default function LandingIntroCards() {
 
         <Col className="my-1 lg:p-2" xs={12} lg={6}>
           <CustomCard color="default">
-            <Title title="آکادمی" icon={icons[2]} type="svg" mb="-2px" />
+            <Title title="آکادمی" iconType="svg" icon={icons[2]} mb="-2px" />
             <CardBody className="m-0 xl:m-6">
               سکان آکادمی مرجع آموزش های به روز و رایگان در حوزه برنامه نویسی
               است. با ارا ئه دوره ها و مسیرهای تخصصی، شما را تا رسیدن به بازار
@@ -89,12 +89,7 @@ export default function LandingIntroCards() {
 
         <Col className="my-1 lg:p-2" xs={12} lg={3}>
           <CustomCard color="default">
-            <Title
-              title="فن واژه"
-              icon={icons[4]}
-              type="svg"
-              mb="-2px"
-            />
+            <Title title="فن واژه" iconType="svg" icon={icons[4]} mb="-2px" />
             <CardBody>
               در فن واژه سکان آکادمی به واژه های تخصصی حوزه برنامه نویسی با دسته
               بندیهای مناسب دسترسی دارید

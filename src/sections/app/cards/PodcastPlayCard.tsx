@@ -53,10 +53,8 @@ export default function PodcastPlayCard({ title }: { title: string }) {
     <Container>
       <Row>
         <Col xs={12}>
-          <CustomCard
-            className="py-4 lg:py-6 mt-4"
-          >
-            <Title type="svg" title={title} icon={icons[4]} mt="2rem" />
+          <CustomCard className="py-4 lg:py-6 mt-4">
+            <Title iconType="svg" title={title} icon={icons[4]} mt="2rem" />
             <Text className="text-base text-right sm:my-4 px-4">
               {data.text}
             </Text>

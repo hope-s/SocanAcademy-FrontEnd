@@ -13,14 +13,14 @@ export default function HomePage() {
     <Page title="سکان | خانه">
       <Header />
       <main className="px-4 md:px-0">
-        <Title type="img" mt="2rem" title="آموزش با سکان آکادمی" />
+        <Title iconType="image" mt="2rem" title="آموزش با سکان آکادمی" />
         <LandingIntroCards />
         <CardPosts />
-        <Title type="img" mt="2rem" title="پادکست با سکان آکادمی" />
+        <Title iconType="image" mt="2rem" title="پادکست با سکان آکادمی" />
         <CardEpisodes />
         <PodcastPlayCard title="رادیو فول استک" />
         <Title
-          type="img"
+          iconType="image"
           mt="2rem !important"
           title="انتشار محتوای شما در سکان آکادمی"
         />

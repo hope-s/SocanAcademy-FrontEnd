@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderSvg from "../../assets/svgs/header-svg.svg";
+import Svg from "../../assets/svgs/header-svg.svg";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -27,26 +27,26 @@ HeaderSecetion.defaultProps = {
 export default function Title({
   title,
   icon,
-  type,
+  iconType,
   mt,
   mb,
 }: {
   title: string;
   icon?: any;
-  type: "svg" | "img";
+  iconType: "svg" | "image";
   mt?: string;
   mb?: string;
 }) {
   return (
-    <HeaderSecetion mt={mt} mb={mb} isSvg={type === "svg" && true}>
-      {icon && type === "svg" ? (
+    <HeaderSecetion mt={mt} mb={mb} isSvg={iconType === "svg" && true}>
+      {icon && iconType === "svg" ? (
         <>
           {icon}
           <h4>{title}</h4>
         </>
       ) : (
         <>
-          <img src={HeaderSvg} alt="title-layer" width="45" height="45" />
+          <img src={Svg} alt="title-layer" width="45" height="45" />
           <h4>{title}</h4>
         </>
       )}
@@ -55,9 +55,9 @@ export default function Title({
 }
 
 Title.propTypes = {
-  title: PropTypes.string.isRequired, //
+  title: PropTypes.string.isRequired,
   icon: PropTypes.any,
-  type: PropTypes.string.isRequired,
+  iconType: PropTypes.string.isRequired,
   mt: PropTypes.string,
   mb: PropTypes.string,
 };

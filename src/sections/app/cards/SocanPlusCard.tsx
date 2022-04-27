@@ -22,7 +22,7 @@ export default function SocanPlusCard({ title }: { title: string }) {
       <Row>
         <Col lg={12} xl={10} className="mx-auto">
           <CardPlus className="">
-            <Title title={title} type="svg" icon={icons[2]} />
+            <Title title={title} iconType="svg" icon={icons[2]} />
             <Text className="text-center md:text-sm">
               اگر به دنبال فضایی تخصصی برای تولید محتوا و انتشار مقاله‌های خود
               هستید، سکان پلاس، خدمتیست که این فضا را برای شما فراهم می‌کند. با
@@ -34,7 +34,13 @@ export default function SocanPlusCard({ title }: { title: string }) {
           </CardPlus>
           <Row className="px-2 md:px-12 mt-1 md:mx-0">
             {Array.from(Array(3)).map((_, index: number) => (
-              <Col key={index} sm={6} md={4} lg={4} className="mx-auto mt-3 px-1 lg:-mt-20">
+              <Col
+                key={index}
+                sm={6}
+                md={4}
+                lg={4}
+                className="mx-auto mt-3 px-1 lg:-mt-20"
+              >
                 <PlusChildCard />
               </Col>
             ))}
