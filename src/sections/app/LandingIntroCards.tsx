@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Card } from "@nextui-org/react";
 import { icons } from "../../assets/svgs/Icons";
 import { Row, Col } from "react-grid-system";
-import Title from "./Title";
+import Title from "../../components/Title";
 import Container from "../../components/Container";
 
 const CustomCard = styled(Card)`

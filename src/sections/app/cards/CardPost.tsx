@@ -20,7 +20,7 @@ const CardPostStyle = styled.div`
     transform: translate(0, 60%);
     width: 100%;
     padding: 1rem;
-    transition: all 0.5s;
+    transition: all 0.4s;
     &:hover {
       transform: translate(0, 25%);
       & .cardWarpperDescription {
@@ -77,6 +77,8 @@ const CardPostStyle = styled.div`
     padding: 0.3rem 0.5rem;
     & svg {
       padding: 0 !important;
+      width: 30px;
+      height: 30px;
     }
   }
   & .bookmarkSvg {

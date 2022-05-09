@@ -1,5 +1,5 @@
 import React from "react";
-import Svg from "../../assets/svgs/header-svg.svg";
+import Svg from "../assets/svgs/header-svg.svg";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -15,6 +15,7 @@ const HeaderSecetion = styled.div<{ mt?: string; mb?: string; isSvg: boolean }>`
   & h4 {
     margin-top: ${({ isSvg }) => (isSvg ? "0" : "0.75rem")};
     margin-right: ${({ isSvg }) => (isSvg ? "10px" : "-25px")};
+    font-size: 18px;
     font-weight: bold;
   }
 `;
@@ -47,7 +48,7 @@ export default function Title({
       ) : (
         <>
           <img src={Svg} alt="title-layer" width="45" height="45" />
-          <h4>{title}</h4>
+          <h4 className="text-block">{title}</h4>
         </>
       )}
     </HeaderSecetion>

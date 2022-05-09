@@ -4,7 +4,7 @@ import { Col, Row } from "react-grid-system";
 import styled from "styled-components";
 import { Bookmark, Share } from "react-bootstrap-icons";
 import PropTypes from "prop-types";
-import Title from "../Title";
+import Title from "../../../components/Title";
 import { icons } from "../../../assets/svgs/Icons";
 import MainButton from "../../../theme/components/MainButton";
 import Container from "../../../components/Container";

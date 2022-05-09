@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Card } from "@nextui-org/react";
-import { Grid, Bookmark, Heart, Flower2 } from "react-bootstrap-icons";
+import {
+  Grid,
+  Bookmark,
+  Heart,
+  Flower2,
+  PersonFill,
+} from "react-bootstrap-icons";
 
 const CustomCard = styled(Card)`
   position: relative;
@@ -71,7 +77,7 @@ const CustomCard = styled(Card)`
         position: absolute;
         top: 0;
         z-index: 99;
-        transform: translateY(80%);
+        transform: translateY(70%);
         transition: 0.4s;
         .card_post_title {
           text-align: right;
@@ -100,27 +106,40 @@ const CustomCard = styled(Card)`
 export default function PlusChildCard() {
   return (
     <CustomCard>
-      <header className="flex align-center px-2 py-2.5">
-        <img
-          src="https://fs.sokanacademy.com/api/files?token=app/profiles/WoGmVYgDkg0lcANKaQ2Oi0CemqLwL1qGXddsdGW6"
-          className="card_avatar_profile"
-          alt="avatar"
-        />
-        <h6 className="mt-2 mr-3">سهیل رستمی</h6>
+      <header className="flex px-2 py-2.5">
+        {true ? (
+          <div className="flex">
+            <div className="w-9 h-9 bg-yellow-500 rounded-lg flex justify-center items-center">
+              <PersonFill size={20} />
+            </div>
+            <h6 className="mt-2 mr-3"> هانیه خانی</h6>
+          </div>
+        ) : (
+          <>
+            <img
+              src="https://fs.sokanacademy.com/api/files?token=app/profiles/WoGmVYgDkg0lcANKaQ2Oi0CemqLwL1qGXddsdGW6"
+              className="card_avatar_profile"
+              alt="avatar"
+            />
+            <h6 className="mt-2 mr-3">  سپهر</h6>
+          </>
+        )}
       </header>
       <div className="card_post_body">
         <div className="card_image_wrapper">
           <img
             className="post_image"
-            src="https://fs.sokanacademy.com/api/files?token=app/pluses/vtbqWzc5tf6YMkL7Avze0LVlnkp2M6njBlB2H8Ag"
+            src="	https://fs.sokanacademy.com/api/files?token=app/pluses/3SNFFB4rnh8HJZ9PfZaua54bF1MyOyztTkxNvjMR"
             alt="img"
           />
           <div className="card_text_wrapper">
-            <h5 className="card_post_title py-0 px-4">دانلود پکیج درگاه پرداخت برای لاراول</h5>
+            <h5 className="card_post_title py-0 px-4">
+              ۴ عادت روانشناختی افرادی که خودآگاهی بالایی دارند
+            </h5>
             <p className="card_post_description py-0 px-4">
-              برای داشتن درگاه پرداخت در سایت های با لاراول بصورت تخصصی نوشته
-              شده اند، نیاز هست تا api درگاه پرداخت برای آن نیز پیاده سازی شود،
-              در این مطلب پکیچ لاراول برای درگاه پرداخت رایان پی معرفی شده است
+              خودآگاهی چیزی نیست که با آن متولد شده باشیم، بلکه با تمرین و
+              ممارست باید به آن دست پیدا کنیم و بهترین تمرین برای افزایش
+              خودآگاهی، ایجاد عادت‌های مفید است.
             </p>
           </div>
         </div>

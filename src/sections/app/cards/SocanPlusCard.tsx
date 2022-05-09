@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Text } from "@nextui-org/react";
 import styled from "styled-components";
 import { Col, Row } from "react-grid-system";
-import Title from "../Title";
+import Title from "../../../components/Title";
 import { icons } from "../../../assets/svgs/Icons";
 import Container from "../../../components/Container";
 import MainButton from "../../../theme/components/MainButton";
@@ -32,7 +32,7 @@ export default function SocanPlusCard({ title }: { title: string }) {
             </Text>
             <MainButton className="mx-auto mt-4"> + ایجاد پست</MainButton>
           </CardPlus>
-          <Row className="px-2 md:px-12 mt-1 md:mx-0">
+          <Row className="px-2 lg:px-12 mt-1 md:mx-0">
             {Array.from(Array(3)).map((_, index: number) => (
               <Col
                 key={index}

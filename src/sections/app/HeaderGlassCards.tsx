@@ -27,11 +27,11 @@ const Card = styled.div`
     font-weight: bold;
     font-size: 1rem !important;
     transition: ease 300ms;
-    &:hover{
-    color: #fcbf17;
+    &:hover {
+      color: #fcbf17;
     }
   }
-  }
+
   & .cardFooter {
     display: flex;
     align-items: center;

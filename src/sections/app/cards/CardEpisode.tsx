@@ -7,6 +7,7 @@ const Card = styled.div`
   display: flex;
   align-items: center;
   box-shadow: 0 5px 15px rgb(0 0 0 / 16%);
+  background-color: #ffffff;
   height: 120px;
   border-radius: 25px;
   cursor: pointer;
@@ -22,7 +23,6 @@ const Card = styled.div`
   }
   .card_expisode_content {
     margin-right: 0.75rem !important;
-
     h6 {
       font-size: 14px !important;
       font-weight: 900;

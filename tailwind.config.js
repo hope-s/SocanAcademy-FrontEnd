@@ -10,6 +10,7 @@ module.exports = {
       },
       colors: {
         primary: '#fcbf17',
+        block: "#0b032d"
       },
       borderRadius: {
         'none': '0',
