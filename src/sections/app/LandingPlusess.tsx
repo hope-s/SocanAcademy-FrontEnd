@@ -18,6 +18,7 @@ const Card = styled.section`
 
 const CardRight = styled.div`
   max-width: 350px;
+  border-radius: 25px;
   & .content {
     width: 100%;
     height: 100%;

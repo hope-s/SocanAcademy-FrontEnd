@@ -6,7 +6,7 @@ import Logo from "../components/Logo";
 import NavbarInput from "./SearchBar";
 import NavbarButtons from "./NavButtons";
 import Container from "../components/Container";
-import Headroom from "react-headroom";
+// import Headroom from "react-headroom";
 import { Link } from "react-router-dom";
 import { icons } from "../assets/svgs/Icons";
 
@@ -41,27 +41,27 @@ const Room = styled.div`
   }
 `;
 
-function HeaderLinks() {
-  return (
-    <Room>
-      <Link to="/">
-        {icons[0]} <span>آکادمی</span>
-      </Link>
-      <Link to="/">
-        {icons[1]} <span>وبلاگ</span>
-      </Link>
-      <Link to="/">
-        {icons[2]} <span>سکان پلاس</span>
-      </Link>
-      <Link to="/">
-        {icons[3]} <span>رادیو فول استک</span>
-      </Link>
-      <Link to="/">
-        {icons[4]} <span>فن واژه</span>
-      </Link>
-    </Room>
-  );
-}
+// function HeaderLinks() {
+//   return (
+//     <Room>
+//       <Link to="/">
+//         {icons[0]} <span>آکادمی</span>
+//       </Link>
+//       <Link to="/">
+//         {icons[1]} <span>وبلاگ</span>
+//       </Link>
+//       <Link to="/">
+//         {icons[2]} <span>سکان پلاس</span>
+//       </Link>
+//       <Link to="/">
+//         {icons[3]} <span>رادیو فول استک</span>
+//       </Link>
+//       <Link to="/">
+//         {icons[4]} <span>فن واژه</span>
+//       </Link>
+//     </Room>
+//   );
+// }
 
 const NavbarStyles = styled.nav`
   background: #0a0328;
@@ -115,7 +115,7 @@ export default function Navbar() {
             <NavbarButtons />
             <div className="relative">
               <NavbarInput placeholder="دنبال چه میگردی؟" />
-              <Search />
+              <Search className="search_icon" />
             </div>
           </Visible>
         </Container>
